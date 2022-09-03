@@ -17,14 +17,39 @@
     > Misc
 */
 
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
 /* Global Styling */
+
 body {
     background-color: black;
-    font-family: Silkscreen;
+    font-family: Source Code Pro;
     color: white;
-    margin: 0px;
+    tab-size: 4;
+    margin: 0px; /* Only applies to stuff outside the main elements */
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none; /* Prevents links from having dumb link stuff */
+}
+
+main {
+    margin: 24px; /* The primary margins */
+}
+
+/* Headings */
+
+h1 {
+    color: whitesmoke;
+    font-size: 54px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+h2 {
+    color: gray;
+    font-size: 24px;
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
