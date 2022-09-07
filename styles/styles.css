@@ -63,8 +63,8 @@ h2 {
     font-size: 1.6rem;
     width: 0;
     animation:
-        typing 3s steps(80, end) forwards,
-        blink .8s infinite;
+        typing 1s steps(30, end) forwards,
+        blink 1s infinite;
 }
 
 .container {
@@ -79,4 +79,4 @@ h2 {
 @keyframes blink {
     from { border-color: transparent }
     to { border-color: green; }
-  }
+}
