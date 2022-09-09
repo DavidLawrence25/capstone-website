@@ -1,82 +1,100 @@
 /*
-    Note for Code Organization:
-    > Background Color
-    > Fonts
-        > Family
-        > Color
-        > Size
-        > Alignment
-    > Positioning
-        > Margin
-        > Padding
-        > Position
-        > Overflow
-        > Display
-        > Float
-        > Z Index
-    > Misc
+	Note for Code Organization:
+	> Background Color
+	> Fonts
+		> Family
+		> Color
+		> Size
+		> Alignment
+	> Positioning
+		> Margin
+		> Padding
+		> Position
+		> Overflow
+		> Display
+		> Float
+		> Z Index
+	> Misc
 */
 
 /* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
-/* Global Styling */
+/* Variables */
+:root {
+	--bg-color: black;
+	--tw-dur: 3s;
+	--tw-del: 1s;
+}
 
+/* Global Styling */
 body {
-    background-color: black;
-    font-family: Source Code Pro;
-    color: white;
-    justify-content: left;
-    tab-size: 4;
-    margin: 0px; /* Only applies to stuff outside the main elements */
+	background-color: var(--bg-color);
+	font-family: Source Code Pro, monospace;
+	color: white;
+	justify-content: left;
+	tab-size: 4;
+	margin: 0px; /* Only applies to stuff outside the main elements */
 }
 
 a {
-    text-decoration: none; /* Prevents links from having dumb link stuff */
+	text-decoration: none; /* Prevents links from having dumb link stuff */
 }
 
 main {
-    margin: 24px; /* The primary margins */
+	margin: 24px; /* The primary margins */
 }
 
 /* Headings */
 
 h1 {
-    color: whitesmoke;
-    font-size: 54px;
-    margin-top: 6px;
-    margin-bottom: 6px;
+	color: whitesmoke;
+	font-size: 3em;
+	margin-top: 6px;
+	margin-bottom: 6px;
 }
 
 h2 {
-    color: gray;
-    font-size: 24px;
-    margin-top: 6px;
-    margin-bottom: 6px;
+	color: gray;
+	font-size: 2em;
+	margin-top: 6px;
+	margin-bottom: 6px;
 }
 
-/* Typewriter Code (thanks to Matt Nikonorov) */
+/* Typewriter Code (adapted from Kevin Powell) */
 .typewriter {
-    overflow: hidden;
-    border-right: .15em solid green;
-    white-space: nowrap;
-    font-size: 1.6rem;
-    width: 0;
-    animation:
-        typing 1s steps(30, end) forwards,
-        blink 1s infinite;
+	position: relative;
+	width: max-content;
 }
 
-.container {
-    display: inline-block;
+.typewriter::before,
+.typewriter::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+.typewriter::before {
+	background: var(--bg-color);
+	animation:
+		typewriting var(--tw-dur) steps(33) var(--tw-del) forwards;
 }
 
-@keyframes blink {
-    from { border-color: transparent }
-    to { border-color: green; }
+.typewriter::after {
+	width: 0.125em;
+	background: green;
+	animation:
+		typewriting var(--tw-dur) steps(33) var(--tw-del) forwards,
+		caretBlink 1s steps(2) infinite;
+}
+
+@keyframes typewriting {
+	to { left: 100% }
+}
+
+@keyframes caretBlink {
+	to { opacity: 0%; }
 }
