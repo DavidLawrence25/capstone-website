@@ -72,30 +72,24 @@ function ConstructHTMLCode(page) {
         </style>
         <header>
             <div class="topNavBar">
+                <a href="index.html"
     `
 
     if (page == 0) {
-        outputStr += `<a href="index.html" class="active">About Me</a>`
-    } else {
-        outputStr += `<a href="index.html">About Me</a>`
+        outputStr += ` class="active"`
     }
-
-    outputStr += `<div class="dropdown">`
+    outputStr += `>About Me</a><div class="dropdown"><button class="dropButton`
 
     if (page == 1 || page == 2) {
-        outputStr += `<button class="dropButton active">Capstone</button>`
-    } else {
-        outputStr += `<button class="dropButton">Capstone</button>`
+        outputStr += ` active`
     }
-
-    outputStr += `<div class="dropOptions">`
+    outputStr += `">Capstone</button><div class="dropOptions"><a href="capstoneProject.html"`
 
     if (page == 1) {
-        outputStr += `<a href="capstoneProject.html" class="active">Project Overview</a>`
-    } else {
-        outputStr += `<a href="capstoneProject.html">Project Overview</a>`
+        outputStr += ` class="active"`
     }
-
+    outputStr += `>Project Overview</a>`
+    
     if (page == 2) {
         outputStr += `<a href="capstoneProgress.html" class="active">Progress</a>`
     } else {
