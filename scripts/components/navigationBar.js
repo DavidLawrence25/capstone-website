@@ -88,29 +88,22 @@ function ConstructHTMLCode(page) {
     if (page == 1) {
         outputStr += ` class="active"`
     }
-    outputStr += `>Project Overview</a>`
+    outputStr += `>Project Overview</a><a href="capstoneProgress.html"`
     
     if (page == 2) {
-        outputStr += `<a href="capstoneProgress.html" class="active">Progress</a>`
-    } else {
-        outputStr += `<a href="capstoneProgress.html">Progress</a>`
+        outputStr += ` class="active"`
     }
-
-    outputStr += `</div></div>`
+    outputStr += `>Progress</a></div></div><a href="academics.html"`
 
     if (page == 3) {
-        outputStr += `<a href="academics.html" class="active">Academics</a>`
-    } else {
-        outputStr += `<a href="academics.html">Academics</a>`
+        outputStr += ` class="active"`
     }
+    outputStr += `>Academics</a><a href="outsideClass.html"`
 
     if (page == 4) {
-        outputStr += `<a href="outsideClass.html" class="active">Outside the Classroom</a>`
-    } else {
-        outputStr += `<a href="outsideClass.html">Outside the Classroom</a>`
+        outputStr += ` class="active"`
     }
-
-    outputStr += `</div></header>`
+    outputStr += `>Outside the Classroom</a></div></header>`
     return outputStr;
 }
 
