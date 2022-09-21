@@ -5,7 +5,7 @@ function ConstructHTMLCode() {
 	height: 100%;
 	width: 0;
 	position: fixed;
-	z-index: 1;
+	z-index: 17;
 	left: 0;
 	top: 0;
 	background-color: rgb(0,0,0);
