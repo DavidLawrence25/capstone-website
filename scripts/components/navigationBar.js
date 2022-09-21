@@ -3,7 +3,7 @@ function ConstructHTMLCode(page) {
         <style>
             /* Top Navigation Bar */
             .topNavBar {
-                background-color: #101010;
+                background-color: #1A2D3C;
                 overflow: hidden;
             }
             
@@ -16,11 +16,11 @@ function ConstructHTMLCode(page) {
             }
             
             .topNavBar a:hover {
-                background-color: #202020;
+                background-color: #1F3749;
             }
             
             .active {
-                background-color: #404040 !important;
+                background-color: #1F4855 !important;
             }
             
             /* Hover Dropdown Menu */
@@ -30,7 +30,7 @@ function ConstructHTMLCode(page) {
             }
             
             .dropdown .dropButton {
-                background-color: #101010;
+                background-color: #1A2D3C;
                 font-family: inherit;
                 color: white;
                 font-size: 18px;
@@ -42,7 +42,7 @@ function ConstructHTMLCode(page) {
             }
             
             .dropdown:hover .dropButton {
-                background-color: #202020;
+                background-color: #1F3749;
             }
             
             .dropdown:hover .dropOptions {
@@ -50,7 +50,7 @@ function ConstructHTMLCode(page) {
             }
             
             .dropOptions {
-                background-color: #282828;
+                background-color: #1F3749;
                 position: absolute;
                 display: none;
                 z-index: 1;
@@ -67,7 +67,7 @@ function ConstructHTMLCode(page) {
             }
             
             .dropOptions a:hover {
-                background-color: #363636;
+                background-color: #1F404F;
             }
         </style>
         <header>

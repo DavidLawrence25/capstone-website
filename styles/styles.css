@@ -18,19 +18,27 @@
 */
 
 /* Font Imports */
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 /* Variables */
 :root {
-	--bg-color: black;
-	--tw-dur: 3s;
-	--tw-del: 1s;
+	/* Color Palette */
+	--gunmetal: #1A2D3C;
+	--pb: #1F3749;
+	--charcoal: #1F404F;
+	--mgeg: #1F4855;
+	--dsg: #2C5254;
+	--feldgrau: #3C6358;
+	--amazon: #467858;
+	--mid-g: #558A4C;
+	--max-g: #6B9745;
+	--citron: #8FA441;
 }
 
 /* Global Styling */
 body {
-	background-color: var(--bg-color);
-	font-family: Source Code Pro, monospace;
+	background-color: var(--gunmetal);
+	font-family: Indie Flower, cursive;
 	color: white;
 	justify-content: left;
 	tab-size: 4;
@@ -59,42 +67,4 @@ h2 {
 	font-size: 2em;
 	margin-top: 6px;
 	margin-bottom: 6px;
-}
-
-/* Typewriter Code (adapted from Kevin Powell) */
-.typewriter {
-	position: relative;
-	width: max-content;
-}
-
-.typewriter::before,
-.typewriter::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-
-.typewriter::before {
-	background: var(--bg-color);
-	animation:
-		typewriting var(--tw-dur) steps(33) var(--tw-del) forwards;
-}
-
-.typewriter::after {
-	width: 0.125em;
-	background: green;
-	animation:
-		typewriting var(--tw-dur) steps(33) var(--tw-del) forwards,
-		caretBlink 1s steps(2) infinite;
-}
-
-@keyframes typewriting {
-	to { left: 100% }
-}
-
-@keyframes caretBlink {
-	to { opacity: 0%; }
 }
