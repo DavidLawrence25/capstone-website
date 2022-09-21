@@ -50,21 +50,54 @@ a {
 }
 
 main {
-	margin: 24px; /* The primary margins */
+	margin-left: 3%;
+	margin-right: 3%;
 }
 
 /* Headings */
 
 h1 {
-	color: whitesmoke;
-	font-size: 3em;
-	margin-top: 6px;
-	margin-bottom: 6px;
+	color: white;
+	font-size: 6em;
+	margin-top: 12px;
+	margin-bottom: 12px;
 }
 
 h2 {
+	color: floralwhite;
+	font-size: 5em;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+h3 {
 	color: gray;
+	font-size: 3em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* Horizontal Line */
+hr {
+	border-color: white;
+	border-radius: 2em;
+}
+
+/* Tables */
+
+table.title-table {
+	border: none;
+	margin: 0;
+}
+
+table.title-table td {
+	padding-right: 2ch;
+}
+
+/* Curtain Menu */
+#open-curtain {
 	font-size: 2em;
-	margin-top: 6px;
-	margin-bottom: 6px;
+	position: fixed;
+	top: 3%;
+	right: 3%;
 }

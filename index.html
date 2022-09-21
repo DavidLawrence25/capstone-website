@@ -3,19 +3,27 @@
 	<head>
 		<!--Created by David Lawrence-->
 		<!--Page Created: Sept. 2, 2022-->
-		<!--Last Commit: Sept. 7, 2022-->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>About Me - David Lawrence</title>
 		<link type="text/css" rel="stylesheet" href="styles/styles.css"></link>
-		<script type="text/javascript" src="scripts/components/navigationBar.js" defer></script>
+		<script type="text/javascript" src="scripts/components/curtainMenu.js" defer></script>
 	</head>
 	<body>
-		<div hidden id="docID">0</div>
-		<top-nav-bar></top-nav-bar>
 		<main>
-			<h1>This is the beginning of a new style and therefore is very unfinished.</h1>
+			<span id="open-curtain" onclick="OpenNav()">&#9776;</span>
+			<table class="title-table">
+				<tbody>
+					<tr>
+						<td><h1>David Lawrence</h1></td>
+						<td><h2>- Class of 2025</h2></td>
+					</tr>
+				</tbody>
+			</table>
+			<hr>
+			<h3>My name is David Lawrence, and I am a sophomore at NUAMES Davis. When I'm not occupied with formal education, I enjoy drawing, doing math, programming, and hanging out with friends.</h3>
 		</main>
+		<curtain-menu></curtain-menu>
 	</body>
 </html>
