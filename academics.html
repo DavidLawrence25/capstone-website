@@ -9,11 +9,28 @@
 		<title>Academics - David Lawrence</title>
 		<link type="text/css" rel="stylesheet" href="styles/styles.css"></link>
 		<script type="text/javascript" src="scripts/components/curtainMenu.js" defer></script>
+		<script type="text/javascript" src="scripts/components/bubbleBackground.js" defer></script>
+		<style>
+
+		</style>
 	</head>
 	<body>
-		<curtain-menu></curtain-menu>
 		<main>
-			<span id="open-curtain" onclick="OpenNav()">&#9776;</span>
+			<div class="noVertMargin horMargin">
+				<span id="open-curtain" onclick="OpenNav()">&#9776;</span>
+				<h1>Academics</h1>
+				<hr><br>
+				<h3>Books Read In High School</h3>
+			</div>
+			<span id="img-carousel">
+				<img src="images/CapstonePhotoDownscaled0.png">
+				<img src="images/CapstonePhotoDownscaled0.png">
+				<img src="images/CapstonePhotoDownscaled0.png">
+				<img src="images/CapstonePhotoDownscaled0.png">
+				<img src="images/CapstonePhotoDownscaled0.png">
+			</span>
 		</main>
+		<curtain-menu></curtain-menu>
+		<bubble-background></bubble-background>
 	</body>
 </html>

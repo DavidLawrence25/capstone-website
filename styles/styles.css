@@ -28,7 +28,6 @@ body {
 	justify-content: left;
 	tab-size: 4;
 	margin: 0px; /* Only applies to stuff outside the main elements */
-	overflow: hidden;
 }
 
 a {
@@ -36,9 +35,8 @@ a {
 }
 
 main {
+	width: 100%;
 	height: 100%;
-	margin-left: 3%;
-	margin-right: 3%;
 	position: absolute;
 }
 
@@ -71,6 +69,28 @@ hr {
 	border-radius: 2em;
 }
 
+/* Margin Control Divs */
+
+.noHorMargin {
+	margin-left: 0%;
+	margin-right: 0%;
+}
+
+.noVertMargin {
+	margin-top: 0%;
+	margin-bottom: 0%;
+}
+
+.horMargin {
+	margin-left: 3% !important;
+	margin-right: 3% !important;
+}
+
+.vertMargin {
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+
 /* Curtain Menu */
 #open-curtain {
 	font-size: 2em;
@@ -78,4 +98,17 @@ hr {
 	top: 3%;
 	right: 3%;
 	z-index: 16;
+}
+
+/* Image Carousel */
+#img-carousel {
+	display: flex;
+}
+
+#img-carousel img {
+	display: block;
+}
+
+#img-carousel::webkit-scrollbar {
+	display: none;
 }

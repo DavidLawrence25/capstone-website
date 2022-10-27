@@ -11,6 +11,9 @@
 		<script type="text/javascript" src="scripts/components/curtainMenu.js" defer></script>
 		<script type="text/javascript" src="scripts/components/bubbleBackground.js" defer></script>
 		<style>
+			body {
+				overflow: hidden;
+			}
 			#content0 {
 				height: 100%;
 				display: inline-flex;
@@ -27,12 +30,14 @@
 	</head>
 	<body>
 		<main>
-			<span id="open-curtain" onclick="OpenNav()">&#9776;</span>
-			<h1>David Lawrence - Class of 2025</h1>
-			<hr><br>
-			<div id="content0">
-				<img src="images/CapstonePhotoEdited0.png">
-				<h3>I am a sophomore at NUAMES Davis who loves to create anything from digital art to computer programs. My life has been heavily based around learning and leading my own pathway forward, and the advent of computing has been integral in my journey. I love complex mathematics, and it is my hope that I can use my expertise to develop smarter and high-security software.</h3>
+			<div class="noVertMargin horMargin">
+				<span id="open-curtain" onclick="OpenNav()">&#9776;</span>
+				<h1>David Lawrence - Class of 2025</h1>
+				<hr><br>
+				<div id="content0">
+					<img src="images/CapstonePhotoDownscaled0.png">
+					<h3>I am a sophomore at NUAMES Davis who loves to create anything from digital art to computer programs. My life has been heavily based around learning and leading my own pathway forward, and the advent of computing has been integral in my journey. I love complex mathematics, and it is my hope that I can use my expertise to develop smarter and high-security software.</h3>
+				</div>
 			</div>
 		</main>
 		<curtain-menu></curtain-menu>
