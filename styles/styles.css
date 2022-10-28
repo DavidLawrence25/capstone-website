@@ -105,16 +105,3 @@ hr {
 	right: 3%;
 	z-index: 16;
 }
-
-/* Image Carousel */
-#img-carousel {
-	display: flex;
-}
-
-#img-carousel img {
-	display: block;
-}
-
-#img-carousel::webkit-scrollbar {
-	display: none;
-}
