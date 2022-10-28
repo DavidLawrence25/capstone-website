@@ -15,22 +15,26 @@
 				overflow: hidden;
 			}
 			#content0 {
-				height: 100%;
-				display: inline-flex;
-				flex-direction: row;
+				display: inline-grid;
+				grid-template-rows: 90%;
+				grid-template-columns: auto auto;
+				align-self: center;
+				align-items: center;
 			}
 			#content0 img {
-				max-height: 75%;
+				width: 100%;
+				max-height: 100%;
 				border-radius: 3%;
 			}
 			#content0 h3 {
 				margin-left: 1em;
+				object-fit: cover;
 			}
 		</style>
 	</head>
 	<body>
 		<main>
-			<div class="noVertMargin horMargin">
+			<div class="noVertMargin horMargin fillContainer">
 				<span id="open-curtain" onclick="OpenNav()">&#9776;</span>
 				<h1>David Lawrence - Class of 2025</h1>
 				<hr><br>
