@@ -92,9 +92,21 @@ hr {
 }
 
 /* Fit To Container */
-.fillContainer {
+.fillContainer .noHorMargin {
+	min-width: 100%;
 	max-width: 100%;
+}
+.fillContainer .noVertMargin {
+	min-height: 100%;
 	max-height: 100%;
+}
+.fillContainer .horMargin {
+	min-width: 94%;
+	max-width: 94%;
+}
+.fillContainer .vertMargin {
+	min-height: 94%;
+	max-height: 94%;
 }
 
 /* Curtain Menu */
