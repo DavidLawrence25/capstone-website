@@ -11,29 +11,17 @@
 		<script type="text/javascript" src="scripts/components/curtainMenu.js" defer></script>
 		<script type="text/javascript" src="scripts/components/bubbleBackground.js" defer></script>
 		<style>
-			.slideshow {
-				position: relative;
-				overflow: hidden;
-				height: 500px;
-				max-width: 90%;
-				margin: 0 auto;
-				transform: translate3d(0, 0, 0);
+			.flexTable {
+				display: flex;
+				flex-flow: row wrap;
+				gap: 3vw 3vw;
 			}
-			.slideshow > div {
-				height: 500px;
-				width: 3450px;
-				background-image: url("images/bookshelf/spritesheet.png");
-				position: absolute;
-				top: 0;
-				left: 0;
-				height: 100%;
-				transform: translate3d(0, 0, 0);
+			.bookshelfEntry {
+				transition: all 0.5s ease;
+				border-radius: 3%;
 			}
-			.slideshow .mover {
-				animation: moveSlideshow 30s linear infinite;
-			}
-			@keyframes moveSlideshow {
-				100%	{ transform: translateX(-50%); }
+			.bookshelfEntry:hover {
+				transform: scale(1.1);
 			}
 		</style>
 	</head>
@@ -44,10 +32,14 @@
 				<h1>Academics</h1>
 				<hr><br>
 				<h3>Books Read In High School</h3>
+				<div class="flexTable" style="margin-left: 5%;">
+					<a href="https://www.goodreads.com/en/book/show/36572141-august-and-everything-after" target="_blank"><img src="images/bookshelf/AugustAndEverythingAfter.jpg" class="bookshelfEntry"></a>
+					<a href="https://www.goodreads.com/book/show/40653162-call-it-what-you-want" target="_blank"><img src="images/bookshelf/CallItWhatYouWant.jpg" class="bookshelfEntry"></a>
+					<a href="https://www.goodreads.com/book/show/19351.The_Epic_of_Gilgamesh" target="_blank"><img src="images/bookshelf/EpicOfGilgamesh.jpg" class="bookshelfEntry"></a>
+					<a href="https://www.goodreads.com/book/show/34236194-more-than-we-can-tell" target="_blank"><img src="images/bookshelf/MoreThanWeCanTell.jpg" class="bookshelfEntry"></a>
+					<a href="https://www.goodreads.com/book/show/7989499-the-odyssey" target="_blank"><img src="images/bookshelf/Odyssey.jpg" class="bookshelfEntry"></a>
+				</div>
 			</div>
-			<div class="slideshow">
-				<div class="mover"></div>
-			 </div>
 		</main>
 		<curtain-menu></curtain-menu>
 		<bubble-background></bubble-background>
