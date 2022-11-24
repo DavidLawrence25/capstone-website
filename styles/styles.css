@@ -70,6 +70,12 @@ h4 {
 	margin-bottom: 5px;
 }
 
+/* Text */
+p {
+	color: white;
+	font-size: 1.5vw;
+}
+
 /* Horizontal Line */
 hr {
 	border-color: white;
@@ -123,4 +129,17 @@ hr {
 	top: 3%;
 	right: 3%;
 	z-index: 16;
+}
+
+/* Flex Table */
+.flexTable {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 3vw 3vw;
+}
+
+/* Math */
+.mathStuff {
+	font-size: 2vw;
+	text-align: center;
 }

@@ -10,6 +10,8 @@
 		<link type="text/css" rel="stylesheet" href="styles/styles.css"></link>
 		<script type="text/javascript" src="scripts/components/curtainMenu.js" defer></script>
 		<script type="text/javascript" src="scripts/components/bubbleBackground.js" defer></script>
+		<!--MathJax Import-->
+		<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	</head>
 	<body>
 		<main>
@@ -19,11 +21,59 @@
 				<hr><br>
 				<h3>Hobbies</h3>
 				<h4>Mathematics</h4>
+				<p>I've been very interested with maths for years, and I decided in the summer of 2021 to begin studying calculus. Most people would tell you that calculus is insanely difficult, but in truth, it isn't all that complicated once you take the leap of faith. One of the first actually difficult problems was the integral below, which I ended up consulting the Math StackExchange community about. The solution is not terribly impressive, but it's my favorite integral so far because of the great memories I gained from solving it.</p>
+				<div class="mathStuff">
+					$$2\int_0^1{\sqrt{\sqrt{x}-x}dx}$$
+					<hr>
+					Start with a simple u-substitution...
+					$$u:=\sqrt{x}$$
+					$$x=u^2\implies dx=2udu$$
+					$$x=0\implies u=0^2=0$$
+					$$x=1\implies u=1^2=1$$
+					<hr>
+					$$4\int_0^1{u\sqrt{u-u^2}du}$$
+					To deal with the radical, we will complete the square...
+					$$4\int_0^1{u\sqrt{\frac{1}{4}-\left(u^2-u+\frac{1}{4}\right)}du}$$
+					$$4\int_0^1{u\sqrt{\frac{1}{4}-\left(u-\frac{1}{2}\right)^2}du}$$
+					$$2\int_0^1{u\sqrt{1-4\left(u-\frac{1}{2}\right)^2}du}$$
+					$$2\int_0^1{u\sqrt{1-(2u-1)^2}du}$$
+					<hr>
+					Unfortunately, we will need to perform a trig substitution...
+					$$\sin{\theta}:=2u-1\implies \cos{\theta}d\theta=2du\implies du=\frac{\cos{\theta}d\theta}{2}$$
+					$$u=0\implies \sin{\theta}=-1\implies \theta=-\frac{\pi}{2}$$
+					$$u=1\implies \sin{\theta}=1\implies \theta=\frac{\pi}{2}$$
+					<hr>
+					$$\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}{\left(\frac{1+\sin{\theta}}{2}\right)(\cos{\theta})\sqrt{1-\sin^2{\theta}}d\theta}$$
+					With trig functions, we can play around with some identities and split up the integral into two easier ones...
+					$$\frac{1}{2}\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}{(1+\sin{\theta})(\cos^2{\theta})d\theta}$$
+					$$\frac{1}{2}\left[\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}{\cos^2{\theta}d\theta}+\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}{\sin{\theta}\cos^2{\theta}d\theta}\right]$$
+					Notice that \(\cos^2{\theta}\) is an even function and that it is being integrated on a symmetric interval. Because of this, we can cut the interval in half and multiply the whole integral by 2.
+					$$\frac{1}{2}\left[2\int_0^{\frac{\pi}{2}}{\cos^2{\theta}d\theta}+\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}{\sin{\theta}\cos^2{\theta}d\theta}\right]$$
+					Also notice that \(\sin{\theta}\cos^2{\theta}\) is an odd function and that it is being integrated on a symmetric interval. These types of integrals evaluate to 0, so we can eliminate this one entirely.
+					$$\int_0^{\frac{\pi}{2}}{\cos^2{\theta}d\theta}$$
+					$$\frac{1}{2}\int_0^{\frac{\pi}{2}}{(1+\cos{2\theta})d\theta}$$
+					$$\frac{1}{2}\left[\int_0^{\frac{\pi}{2}}{d\theta}+\int_0^{\frac{\pi}{2}}{\cos{2\theta}d\theta}\right]$$
+					$$\frac{\pi}{4}+\frac{1}{2}\int_0^{\frac{\pi}{2}}{\cos{2\theta}d\theta}$$
+					<hr>
+					This last integral needs one more substitution to finish up...
+					$$\alpha:=2\theta$$
+					$$\theta=\frac{\alpha}{2}\implies d\theta=\frac{d\alpha}{2}$$
+					$$\theta=0\implies \alpha=0$$
+					$$\theta=\frac{\pi}{2}\implies \alpha=\pi$$
+					<hr>
+					$$\frac{\pi}{4}+\frac{1}{4}\int_0^{\pi}{\cos{\alpha}d\alpha}$$
+					$$\frac{\pi}{4}+\frac{1}{4}[\sin{\pi}-\sin{0}]$$
+					$$\frac{\pi}{4}$$
+					<hr>
+					$$2\int_0^1{\sqrt{\sqrt{x}-x}dx}=\frac{\pi}{4}$$
+				</div>
 				<h4>Programming</h4>
 				<h4>something else lol</h4>
 				<h3 style="text-align: right;">Robotics</h3>
 				<h3>Travel</h3>
 				<h3 style="text-align: right;">Creative Work</h3>
+				<h4 style="text-align: right;">Youtube</h4>
+				<h4 style="text-align: right;">Scratch Projects</h4>
 			</div>
 		</main>
 		<curtain-menu></curtain-menu>
