@@ -14,11 +14,11 @@ function ConstructHTMLCode() {
 	transition: 0.5s;
 }
 .curtain-content {
-	position: relative;
-	top: 25%;
+	position: absolute;
 	width: 100%;
 	text-align: center;
-	margin-top: 30px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 .curtain-menu a {
 	padding: 8px;
@@ -50,11 +50,14 @@ function ConstructHTMLCode() {
 	<div id="site-nav" class="curtain-menu">
 		<a href="javascript:void(0)" class="close-btn" onclick="CloseNav()">&times;</a>
 		<div class="curtain-content">
+			<h3>Personal Life</h3>
 			<a href="index.html">About Me</a>
+			<a href="outsideClass.html">Outside the Classroom</a>
+			<a href="goals.html">My Goals</a>
+			<h3>Professional Life</h3>
 			<a href="capstoneProject.html">Capstone Project</a>
 			<a href="capstoneProgress.html">Devlogs</a>
 			<a href="academics.html">Academics</a>
-			<a href="outsideClass.html">Outside the Classroom</a>
 		</div>
 	</div>
 </body>
