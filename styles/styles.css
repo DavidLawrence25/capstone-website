@@ -70,6 +70,13 @@ h4 {
 	margin-bottom: 5px;
 }
 
+h6 {
+	color: aliceblue;
+	font-size: 1vw;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 /* Text */
 p {
 	color: white;
