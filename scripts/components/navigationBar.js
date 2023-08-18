@@ -5,9 +5,9 @@ function ConstructHTMLCode() {
             .nav-bar {
                 list-style-type: none;
                 display: flex;
-                align-items: center;
+                align-items: baseline;
                 position: fixed;
-                width: 100%;
+                width: 99%;
                 top: 0;
                 margin: 0;
                 padding: 0;
@@ -32,17 +32,16 @@ function ConstructHTMLCode() {
             }
 
             .nav-bar li.nav-option a:hover {
-                background-color: var(--white);
-                color: var(--dark-gray)
+                border-bottom: 1px solid var(--mint);
             }
         </style>
         <body>
             <ul class="nav-bar">
                 <li><a href="index.html" class="medium-text">Rose</a></li>
-                <li class="nav-option"><a href="academics.html" class="small-text">Academics</a></li>
-                <li class="nav-option"><a href="capstoneProject.html" class="small-text">Capstone</a></li>
-                <li class="nav-option"><a href="goals.html" class="small-text">Goals</a></li>
-                <li class="nav-option"><a href="outsideClass.html" class="small-text">Outside Class</a></li>
+                <li class="nav-option"><a href="academics.html" class="small-text">ACADEMICS</a></li>
+                <li class="nav-option"><a href="capstoneProject.html" class="small-text">CAPSTONE</a></li>
+                <li class="nav-option"><a href="goals.html" class="small-text">GOALS</a></li>
+                <li class="nav-option"><a href="outsideClass.html" class="small-text">OUTSIDE CLASS</a></li>
             </ul>
         </body>
     `
