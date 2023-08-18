@@ -40,6 +40,10 @@ body {
 	color: var(--white);
 }
 
+.centered-text {
+	text-align: center;
+}
+
 @media (max-width: 481px) {
 	.desktop {
 		display: none;
