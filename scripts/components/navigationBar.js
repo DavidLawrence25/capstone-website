@@ -34,12 +34,6 @@ function ConstructHTMLCode() {
             .nav-bar li.nav-option a:hover {
                 border-bottom: 1px solid var(--mint);
             }
-
-            @media (max-width: 481px) {
-                .nav-bar {
-                    display: none;
-                }
-            }
         </style>
         <body>
             <ul class="nav-bar">

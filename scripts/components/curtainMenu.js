@@ -29,7 +29,7 @@ function ConstructHTMLCode() {
 	left: 0;
 	top: 0;
 	background-color: rgb(0,0,0);
-	background-color: rgba(0,0,0, 0.6); 
+	background-color: rgba(0,0,0, 0.6);
 	overflow-x: hidden;
 	transition: 0.5s;
 }
@@ -57,11 +57,6 @@ function ConstructHTMLCode() {
 	font-size: 32px;
 	color: var(--white);
 }
-@media (min-width: 481px) {
-	#open-curtain {
-		display: none;
-	}
-}
 </style>
 <body>
 	<span id="open-curtain" onclick="OpenNav()">☰</span>
@@ -80,21 +75,25 @@ function ConstructHTMLCode() {
 </body>
 	`;
 }
-class CurtainMenu extends HTMLElement {
-    constructor() {
-        super();
-    }
 
-    connectedCallback() {
-        this.innerHTML = ConstructHTMLCode();
-    }
+class CurtainMenu extends HTMLElement {
+	constructor() {
+		super();
+	}
+
+	connectedCallback() {
+		this.innerHTML = ConstructHTMLCode();
+	}
 }
+
 function OpenNav() {
 	document.getElementById("site-nav").style.width = "100%";
 	document.getElementsByClassName("curtain-content")[0].style.opacity = 1;
 }
+
 function CloseNav() {
 	document.getElementById("site-nav").style.width = "0%";
 	document.getElementsByClassName("curtain-content")[0].style.opacity = 0;
 }
+
 customElements.define(`curtain-menu`, CurtainMenu);
