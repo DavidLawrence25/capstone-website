@@ -38,6 +38,13 @@ figure figcaption {
 }
 
 /* Basic Classes */
+.huge-text {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 500;
+	font-size: 96px;
+	color: var(--mint);
+}
+
 .large-text {
 	font-family: 'Roboto Slab', serif;
 	font-weight: 500;
@@ -45,10 +52,24 @@ figure figcaption {
 	color: var(--mint);
 }
 
+.big-text {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 40px;
+	color: var(--white);
+}
+
 .medium-text {
 	font-family: 'Playfair Display', serif;
 	font-weight: 400;
 	font-size: 32px;
+	color: var(--white);
+}
+
+.okay-text {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 300;
+	font-size: 24px;
 	color: var(--white);
 }
 
@@ -68,6 +89,20 @@ figure figcaption {
 
 .centered-text {
 	text-align: center;
+}
+
+/* Flex-Table */
+.flex-table {
+	display: flex;
+	justify-content: space-evenly;
+	align-content: center;
+}
+
+.flex-column {
+	display: flex;
+	flex-flow: column;
+	flex-basis: 40%;
+	column-gap: 10%;
 }
 
 @media (max-width: 481px) {

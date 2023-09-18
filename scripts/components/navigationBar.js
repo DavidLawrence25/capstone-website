@@ -34,8 +34,14 @@ function ConstructHTMLCode() {
             .nav-bar li.nav-option a:hover {
                 border-bottom: 1px solid var(--mint);
             }
+
+            #magic-spacer {
+                width: 100%;
+                height: calc(1vmax + 42px);
+            }
         </style>
         <body>
+            <div id="magic-spacer"></div>
             <ul class="nav-bar">
                 <li><a href="index.html" class="medium-text">Rose</a></li>
                 <li class="nav-option"><a href="academics.html" class="small-text">ACADEMICS</a></li>
