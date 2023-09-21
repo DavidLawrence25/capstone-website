@@ -64,12 +64,13 @@ function ConstructHTMLCode() {
 		<span id="close-btn" onclick="CloseNav()">&times;</span>
 		<div class="curtain-content">
 			<div class="link-category">Personal Life</div>
-			<a class="link" href="index.html">About Me</a>
-			<a class="link" href="outsideClass.html">Outside Classroom</a>
-			<a class="link" href="goals.html">My Goals</a>
+			<a class="link" href="index.html">About Rose</a>
+			<a class="link" href="creativeWorks.html">Creative Works</a>
+			<a class="link" href="goals.html">Goals</a>
 			<div class="link-category">Professional Life</div>
-			<a class="link" href="capstoneProject.html">Capstone</a>
 			<a class="link" href="academics.html">Academics</a>
+			<a class="link" href="awardsAndLetters.html">Awards & Letters</a>
+			<a class="link" href="personalStatement.html">Personal Statement</a>
 		</div>
 	</div>
 </body>

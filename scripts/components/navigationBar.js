@@ -46,9 +46,11 @@ function ConstructHTMLCode() {
             <ul class="nav-bar">
                 <li><a href="index.html" class="medium-text">Rose</a></li>
                 <li class="nav-option"><a href="academics.html" class="small-text">ACADEMICS</a></li>
-                <li class="nav-option"><a href="capstoneProject.html" class="small-text">CAPSTONE</a></li>
+                <li class="nav-option"><a href="awardsAndLetters.html" class="small-text">AWARDS & LETTERS</a></li>
+                <li class="nav-option"><a href="creativeWorks.html" class="small-text">CREATIVE WORKS</a></li>
                 <li class="nav-option"><a href="goals.html" class="small-text">GOALS</a></li>
-                <li class="nav-option"><a href="outsideClass.html" class="small-text">OUTSIDE CLASS</a></li>
+                <li class="nav-option"><a href="personalStatement.html" class="small-text">PERSONAL STATEMENT</a></li>
+                <li class="nav-option"><a href="resume.html" class="small-text">RESUME</a></li>
             </ul>
         </body>
     `
