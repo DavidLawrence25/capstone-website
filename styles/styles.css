@@ -91,11 +91,23 @@ figure figcaption {
 	text-align: center;
 }
 
+.page-vertical-center {
+	display: flex;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	justify-content: space-between;
+}
+
 /* Flex-Table */
 .flex-table {
 	display: flex;
 	justify-content: space-evenly;
-	align-content: center;
+	align-items: center;
 }
 
 .flex-column {

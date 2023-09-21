@@ -13,6 +13,7 @@ function ConstructHTMLCode() {
                 padding: 0;
                 overflow: hidden;
                 border-bottom: 1px solid var(--white);
+                z-index: 10;
             }
 
             .nav-bar li {
