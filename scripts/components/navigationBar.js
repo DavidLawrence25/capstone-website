@@ -1,113 +1,61 @@
-function ConstructHTMLCode(page) {
-    let outputStr = `
+function ConstructHTMLCode() {
+    return `
         <style>
-            /* Top Navigation Bar */
-            .topNavBar {
-                background-color: #1A2D3C;
-                overflow: hidden;
-            }
-            
-            .topNavBar a {
-                color: white;
-                font-size: 18px;
-                text-align: center;
-                padding: 6px 16px;
-                float: left;
-            }
-            
-            .topNavBar a:hover {
-                background-color: #1F3749;
-            }
-            
-            .active {
-                background-color: #1F4855 !important;
-            }
-            
-            /* Hover Dropdown Menu */
-            .dropdown {
-                overflow: hidden;
-                float: left;
-            }
-            
-            .dropdown .dropButton {
-                background-color: #1A2D3C;
-                font-family: inherit;
-                color: white;
-                font-size: 18px;
-                text-align: center;
+            /* Navigation Bar */
+            .nav-bar {
+                list-style-type: none;
+                display: flex;
+                align-items: baseline;
+                position: fixed;
+                width: 99%;
+                top: 0;
                 margin: 0;
-                padding: 6px 16px;
-                border: none;
-                outline: none;
+                padding: 0;
+                overflow: hidden;
+                border-bottom: 1px solid var(--white);
+                background-color: var(--dark-gray);
+                z-index: 10;
             }
-            
-            .dropdown:hover .dropButton {
-                background-color: #1F3749;
+
+            .nav-bar li {
+                float: left;
             }
-            
-            .dropdown:hover .dropOptions {
+
+            .nav-bar li a {
                 display: block;
+                text-align: center;
+                padding: 0.5vmax 1vmax;
+                text-decoration: none;
+                color: var(--white);
             }
-            
-            .dropOptions {
-                background-color: #1F3749;
-                position: absolute;
-                display: none;
-                z-index: 1;
-                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+            .nav-bar li.nav-option a {
+                color: var(--mint);
             }
-            
-            .dropOptions a {
-                color: white;
-                font-size: 12px;
-                text-align: left;
-                padding: 6px 6px;
-                display: block;
-                float: none;
+
+            .nav-bar li.nav-option a:hover {
+                border-bottom: 1px solid var(--mint);
             }
-            
-            .dropOptions a:hover {
-                background-color: #1F404F;
+
+            #magic-spacer {
+                width: 100%;
+                height: calc(1vmax + 42px);
             }
         </style>
-        <header>
-            <div class="topNavBar">
-                <a href="index.html"
+        <body>
+            <div id="magic-spacer"></div>
+            <ul class="nav-bar">
+                <li><a href="index.html" class="medium-text">Rose</a></li>
+                <li class="nav-option"><a href="academics.html" class="smaller-text">ACADEMICS</a></li>
+                <li class="nav-option"><a href="awardsAndLetters.html" class="smaller-text">AWARDS & LETTERS</a></li>
+                <li class="nav-option"><a href="creativeWorks.html" class="smaller-text">CREATIVE WORKS</a></li>
+                <li class="nav-option"><a href="goals.html" class="smaller-text">GOALS</a></li>
+                <li class="nav-option"><a href="personalStatement.html" class="smaller-text">PERSONAL STATEMENT</a></li>
+                <li class="nav-option"><a href="resume.html" class="smaller-text">RESUME</a></li>
+            </ul>
+        </body>
     `
-
-    if (page == 0) {
-        outputStr += ` class="active"`
-    }
-    outputStr += `>About Me</a><div class="dropdown"><button class="dropButton`
-
-    if (page == 1 || page == 2) {
-        outputStr += ` active`
-    }
-    outputStr += `">Capstone</button><div class="dropOptions"><a href="capstoneProject.html"`
-
-    if (page == 1) {
-        outputStr += ` class="active"`
-    }
-    outputStr += `>Project Overview</a><a href="capstoneProgress.html"`
-    
-    if (page == 2) {
-        outputStr += ` class="active"`
-    }
-    outputStr += `>Progress</a></div></div><a href="academics.html"`
-
-    if (page == 3) {
-        outputStr += ` class="active"`
-    }
-    outputStr += `>Academics</a><a href="outsideClass.html"`
-
-    if (page == 4) {
-        outputStr += ` class="active"`
-    }
-    outputStr += `>Outside the Classroom</a></div></header>`
-    return outputStr;
 }
-
-let doc = parseInt(document.getElementById(`docID`).innerHTML);
 
 class TopNavigationBar extends HTMLElement {
     constructor() {
@@ -115,7 +63,7 @@ class TopNavigationBar extends HTMLElement {
     }
 
     connectedCallback() {
-        this.innerHTML = ConstructHTMLCode(doc);
+        this.innerHTML = ConstructHTMLCode();
     }
 }
 

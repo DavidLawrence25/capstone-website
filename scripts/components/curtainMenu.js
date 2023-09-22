@@ -1,6 +1,26 @@
 function ConstructHTMLCode() {
-    let outputStr = `
+    return `
 <style>
+#open-curtain {
+	position: fixed;
+	top: 8px;
+	right: 16px;
+	z-index: 16;
+	color: var(--white);
+	font-size: 32px;
+}
+.link-category {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 500;
+	font-size: 10vw;
+	color: var(--mint);
+}
+.link {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 7vw;
+	color: var(--white);
+}
 .curtain-menu {
 	height: 100%;
 	width: 0;
@@ -9,7 +29,7 @@ function ConstructHTMLCode() {
 	left: 0;
 	top: 0;
 	background-color: rgb(0,0,0);
-	background-color: rgba(0,0,0, 0.9);
+	background-color: rgba(0,0,0, 0.6);
 	overflow-x: hidden;
 	transition: 0.5s;
 }
@@ -19,64 +39,62 @@ function ConstructHTMLCode() {
 	text-align: center;
 	top: 50%;
 	transform: translateY(-50%);
+	opacity: 0;
 }
 .curtain-menu a {
 	padding: 8px;
 	text-decoration: none;
-	font-size: 36px;
-	color: #818181;
 	display: block;
 	transition: 0.3s;
 }
-.curtain-menu a:hover, .curtain-menu a:focus {
-	color: #f1f1f1;
+.link:hover, .link:focus {
+	text-decoration: underline;
 }
-.curtain-menu .close-btn {
+.curtain-menu #close-btn {
 	position: absolute;
 	top: 20px;
 	right: 45px;
-	font-size: 60px;
-}
-@media screen and (max-height: 450px) {
-	.curtain-menu a {font-size: 20px}
-	.curtain-menu .close-btn {
-		font-size: 40px;
-		top: 15px;
-		right: 35px;
-	}
+	font-size: 32px;
+	color: var(--white);
 }
 </style>
 <body>
+	<span id="open-curtain" onclick="OpenNav()">☰</span>
 	<div id="site-nav" class="curtain-menu">
-		<a href="javascript:void(0)" class="close-btn" onclick="CloseNav()">&times;</a>
+		<span id="close-btn" onclick="CloseNav()">&times;</span>
 		<div class="curtain-content">
-			<h3>Personal Life</h3>
-			<a href="index.html">About Me</a>
-			<a href="outsideClass.html">Outside the Classroom</a>
-			<a href="goals.html">My Goals</a>
-			<h3>Professional Life</h3>
-			<a href="capstoneProject.html">Capstone Project</a>
-			<a href="capstoneProgress.html">Devlogs</a>
-			<a href="academics.html">Academics</a>
+			<div class="link-category">Personal Life</div>
+			<a class="link" href="index.html">About Rose</a>
+			<a class="link" href="creativeWorks.html">Creative Works</a>
+			<a class="link" href="goals.html">Goals</a>
+			<div class="link-category">Professional Life</div>
+			<a class="link" href="academics.html">Academics</a>
+			<a class="link" href="awardsAndLetters.html">Awards & Letters</a>
+			<a class="link" href="personalStatement.html">Personal Statement</a>
 		</div>
 	</div>
 </body>
 	`;
-    return outputStr;
 }
-class CurtainMenu extends HTMLElement {
-    constructor() {
-        super();
-    }
 
-    connectedCallback() {
-        this.innerHTML = ConstructHTMLCode();
-    }
+class CurtainMenu extends HTMLElement {
+	constructor() {
+		super();
+	}
+
+	connectedCallback() {
+		this.innerHTML = ConstructHTMLCode();
+	}
 }
+
 function OpenNav() {
 	document.getElementById("site-nav").style.width = "100%";
+	document.getElementsByClassName("curtain-content")[0].style.opacity = 1;
 }
+
 function CloseNav() {
 	document.getElementById("site-nav").style.width = "0%";
+	document.getElementsByClassName("curtain-content")[0].style.opacity = 0;
 }
+
 customElements.define(`curtain-menu`, CurtainMenu);

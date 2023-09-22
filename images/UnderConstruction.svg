@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 384">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b0e4c9;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #f9fcfd;
+      }
+    </style>
+  </defs>
+  <g id="Layer_3" data-name="Layer 3">
+    <polygon id="Left_Line_3" data-name="Left Line 3" class="cls-2" points="320 100.1915 320 283.8085 344 267.0085 344 116.9915 320 100.1915"/>
+    <polygon id="Left_Line_2" data-name="Left Line 2" class="cls-2" points="397.5775 229.5043 397.5775 154.4957 373.5775 137.6957 373.5775 246.3043 397.5775 229.5043"/>
+    <polygon id="Left_Line_1" data-name="Left Line 1" class="cls-2" points="427.1551 175.2 427.1551 208.8 451.1551 192 427.1551 175.2"/>
+    <polygon id="Left_Bracket" data-name="Left Bracket" class="cls-1" points="512 176 512 208 352 320 352 352 320 352 320 303.339 479.0558 192 320 80.661 320 32 352 32 352 64 512 176"/>
+  </g>
+  <g id="Layer_2" data-name="Layer 2">
+    <polygon class="cls-1" points="259.1202 0 220.7202 384 259.1202 384 291.2798 0 259.1202 0"/>
+  </g>
+  <g id="Layer_1" data-name="Layer 1">
+    <polygon id="Left_Line_3-2" data-name="Left Line 3" class="cls-2" points="192 100.1915 192 283.8085 168 267.0085 168 116.9915 192 100.1915"/>
+    <polygon id="Left_Line_2-2" data-name="Left Line 2" class="cls-2" points="114.4225 229.5043 114.4225 154.4957 138.4225 137.6957 138.4225 246.3043 114.4225 229.5043"/>
+    <polygon id="Left_Line_1-2" data-name="Left Line 1" class="cls-2" points="84.8449 175.2 84.8449 208.8 60.8449 192 84.8449 175.2"/>
+    <polygon id="Left_Bracket-2" data-name="Left Bracket" class="cls-1" points="0 176 0 208 160 320 160 352 192 352 192 303.339 32.9443 192 192 80.661 192 32 160 32 160 64 0 176"/>
+  </g>
+</svg>
