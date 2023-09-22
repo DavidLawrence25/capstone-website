@@ -6,6 +6,7 @@ function ConstructHTMLCode() {
 	bottom: 0.5%;
 	left: 0;
 	width: 100%;
+	background-color: var(--dark-gray);
 }
 </style>
 <body>
