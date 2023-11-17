@@ -3,7 +3,7 @@ function ConstructHTMLCode() {
 <style>
 .copyright-footer {
 	position: fixed;
-	bottom: 0.5%;
+	bottom: 0;
 	left: 0;
 	width: 100%;
 	background-color: var(--dark-gray);
@@ -11,8 +11,9 @@ function ConstructHTMLCode() {
 </style>
 <body>
 	<div class="tiny-text centered-text copyright-footer">
-		<hr></hr>
+		<hr width="99%">
 		&copy;2022-2023 Rose Thorne. All rights reserved.
+		<div class="spacer" style="height: 0.5vmin;"></div>
 	</div>
 </body>
 	`;
