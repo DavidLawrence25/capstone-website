@@ -12,7 +12,7 @@ function ConstructHTMLCode() {
 <body>
 	<div class="tiny-text centered-text copyright-footer">
 		<hr width="99%">
-		&copy;2022-2023 Rose Thorne. All rights reserved.
+		&copy;2022-2024 Rose Thorne. All rights reserved.
 		<div class="spacer" style="height: 0.5vmin;"></div>
 	</div>
 </body>
