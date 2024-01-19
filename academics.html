@@ -1,49 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Academics - Rose Thorne</title>
-	<link rel="stylesheet" href="styles/styles.css">
-	<script type="text/javascript" src="scripts/components/navigationBar.js" defer=""></script>
-	<script type="text/javascript" src="scripts/components/curtainMenu.js" defer=""></script>
-	<script type="text/javascript" src="scripts/components/copyrightFooter.js" defer=""></script>
-</head>
-<body>
-	<div class="desktop">
-		<top-nav-bar></top-nav-bar>
-		<div class="flex-table page-vertical-center">
-			<div class="flex-column">
-				<img src="images/UnderConstruction.svg" alt="Two angle brackets surrounding a forward slash.">
-			</div>
-			<div class="flex-column">
-				<div class="large-text">Whoops!</div>
-				<div class="medium-text">Page Under Construction</div>
-				<div class="spacer" style="height: 2.5vmax;"></div>
-				<div class="small-text" style="color: var(--mint);">
-					It looks like the page you are trying to access is under construction. Please be patient as Rose works to bring you the highest quality website she can design. (it's a lot of work)
-					<br><br>
-					In the meantime, why not visit the other pages? Rose has created plenty of content to showcase her work, and she would really appreciate your interest.
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Academics - Rose Thorne</title>
+		<link rel="stylesheet" href="styles/styles.css" />
+		<script
+			type="text/javascript"
+			src="scripts/components/navigationBar.js"
+			defer=""
+		></script>
+		<script
+			type="text/javascript"
+			src="scripts/components/curtainMenu.js"
+			defer=""
+		></script>
+		<script
+			type="text/javascript"
+			src="scripts/components/bookshelf.js"
+			defer=""
+		></script>
+		<script
+			type="text/javascript"
+			src="scripts/components/copyrightFooter.js"
+			defer=""
+		></script>
+	</head>
+	<body>
+		<div class="desktop">
+			<top-nav-bar></top-nav-bar>
+			<div class="flex-table page-vertical-center">
+				<div class="flex-column">
+					<book-shelf></book-shelf>
+				</div>
+				<div class="flex-column">
+					<div class="large-text">Bookshelf</div>
+					<div class="medium-text">Recent Reads</div>
+					<div class="spacer" style="height: 2.5vmax"></div>
+					<div class="small-text" style="color: var(--mint)">
+						Over the course of her high school career, Rose has read
+						a handful of books that you might enjoy. Here are her
+						three most recent reads, ranging from sapphic fiction to
+						historical drama.
+						<br /><br />
+						Not every book here is amazing; in fact, many of these
+						don't surpass four stars on Goodreads. Nevertheless,
+						there might be something worth reading here.
+					</div>
 				</div>
 			</div>
+			<copyright-footer></copyright-footer>
 		</div>
-		<copyright-footer></copyright-footer>
-	</div>
-	<div class="mobile">
-		<curtain-menu></curtain-menu>
-		<div class="page-vertical-center" style="flex-flow: column; top: 10%; bottom: 10%; margin-left: 10%; margin-right: 10%;">
-			<div>
-				<div class="large-text centered-text">Whoops!</div>
-				<div class="medium-text centered-text">Page Under Construction</div>
+		<div class="mobile">
+			<curtain-menu></curtain-menu>
+			<div
+				class="page-vertical-center"
+				style="
+					flex-flow: column;
+					top: 10%;
+					bottom: 10%;
+					margin-left: 10%;
+					margin-right: 10%;
+				"
+			>
+				<div>
+					<div class="large-text centered-text">Whoops!</div>
+					<div class="medium-text centered-text">
+						Page Under Construction
+					</div>
+				</div>
+				<div
+					class="small-text centered-text"
+					style="color: var(--mint)"
+				>
+					It looks like the page you are trying to access is under
+					construction. Please be patient as Rose works to bring you
+					the highest quality website she can design. (it's a lot of
+					work)
+				</div>
+				<div
+					class="small-text centered-text"
+					style="color: var(--mint)"
+				>
+					In the meantime, why not visit the other pages? Rose has
+					created plenty of content to showcase her work, and she
+					would really appreciate your interest.
+				</div>
+				<img
+					src="images/UnderConstruction.svg"
+					alt="Two angle brackets surrounding a forward slash."
+				/>
 			</div>
-			<div class="small-text centered-text" style="color: var(--mint);">
-				It looks like the page you are trying to access is under construction. Please be patient as Rose works to bring you the highest quality website she can design. (it's a lot of work)
-			</div>
-			<div class="small-text centered-text" style="color: var(--mint);">
-				In the meantime, why not visit the other pages? Rose has created plenty of content to showcase her work, and she would really appreciate your interest.
-			</div>
-			<img src="images/UnderConstruction.svg" alt="Two angle brackets surrounding a forward slash.">
 		</div>
-	</div>
-</body>
+	</body>
 </html>
